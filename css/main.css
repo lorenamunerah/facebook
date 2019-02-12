@@ -1,0 +1,330 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header{
+    height: 42px;
+    width: 100vw;
+    background: #4267B2;
+    position: sticky;
+    top:0px;
+}
+#content{
+    width: 100vw;
+    min-height: calc(100vh - 42px);
+    height: 100%;
+    padding: 15px 15vw 0 15vw;
+    display: flex;
+    justify-content: space-between;
+    background: #E9EBEE;
+}
+#leftBar{
+    flex: 0.9;
+}
+#timeline{
+    flex: 2.5;
+}
+
+#rightBar{
+    flex: 1.5;
+}
+#leftBar,
+#rightBar,
+#timeline{
+    border-radius: 5px;
+    margin-right: 15px;
+}
+.section{
+    width: 100%;
+    margin-bottom: 5px;
+}
+.section .item,
+.section .ac,
+.section .explorar{
+    padding: 5px;
+    font-size: 90%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 1px 1px rgba(214, 214, 215, 0.0);
+    transition: all 0.2s ease;
+}
+.section .item.selected,
+.section .item:hover{    
+    box-shadow: 0px 0px 1px 1px rgba(214, 214, 215, 0.6);
+    background: rgba(243, 245, 247, 0.6);
+    border-radius: 2px;
+}
+
+.section .item .profilePic{
+    width:10%; 
+    height:max-content;
+    flex:8;
+}
+.Barra-estado{
+    width: 100%;
+    height: 23%;
+    border: 0.7px solid rgba(211, 208, 208, 0.664);
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+}
+.Texto{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    border-bottom: 1px solid rgba(192, 192, 192, 0.253);
+    position: sticky;
+}
+.Interaccion{
+    display: flex;
+    height: 28%;
+    width: 100%;
+}
+.Barra-estado .Crear-publicacion,
+.Barra-estado .Crear-publicacion:hover{
+    width: 100%; 
+    height: 22%;
+    background: #F5F6F7;
+    border-radius: 5px;
+    border-bottom: 0.7px solid rgba(221, 221, 221, 0.514);
+    box-shadow: 0px 0px 1px 1px rgba(214, 214, 215, 0.0);    
+}
+
+.Texto .profilePic{
+   /* max-width: 18%;*/
+    width: 14%; 
+    height: 70%;
+    /*background: darkgrey;*/
+   /* flex:14;*/
+    
+}
+.Texto .text{
+    flex:86;
+    width: 86%;
+    height: 100%;
+    border: none;  
+    border-radius: 4px;    
+}
+.Texto .text::placeholder{
+    padding-top: 6%;
+    color:rgb(174, 177, 180);
+    font-weight:450;
+}
+.cabeza{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /*background: rgb(23, 190, 1);*/
+    padding: 0px 15vw 0 15vw;
+}
+.btn {
+    width: 100%;
+    height: 100%;
+    border: none;
+   /* background-color: inherit;*/
+    cursor: pointer;
+    display: flex;
+    border-radius: 2px;
+    
+  }
+  
+  .btn:hover {background: #3B5CA0;}
+
+  .Interaccion .contenerdor{
+    padding: 1% 4% 1% 4%;
+    width: 100%; 
+    height: 100%; 
+    display: flex; 
+    justify-content: space-between;
+  /*  background: #3B5CA0;*/
+  }
+
+  .Interaccion .contenerdor .foto,
+  .Interaccion .contenerdor .etiquetar,
+  .Interaccion .contenerdor .sentimiento,
+  .Interaccion .contenerdor .mas{
+      display: flex;
+    margin-right: 1.5%;
+    border-radius: 15px;
+    flex:30;
+    background:#F5F6F7; 
+  }
+
+  .Interaccion .contenerdor .foto{
+    width:20%;
+    height:100%;
+    flex:20;
+  }
+  .Interaccion .contenerdor .etiquetar,
+  .Interaccion .contenerdor .sentimiento{    
+    width:30%;
+    height:100%;
+    flex:35;
+  }
+  .Interaccion .contenerdor .mas{
+    width:10%;
+    height:100%;
+    flex:10;
+  }
+  .Interaccion .contenerdor .foto:hover,
+  .Interaccion .contenerdor .etiquetar:hover,
+  .Interaccion .contenerdor .sentimiento:hover,
+  .Interaccion .contenerdor .mas:hover{
+    background:#EBEDF0;
+}
+
+.contenedorder{    
+    width: 100%;
+    height: 100%;
+    justify-content:space-between;
+}
+.contenedorder .historias{
+    width: 100%; 
+    background: rgb(255, 255, 255);
+    height: 45%;
+    border-radius: 10px;
+    border: 0.7px solid rgba(221, 221, 221, 0.514);
+    box-shadow: 0px 0px 1px 1px rgba(214, 214, 215, 0.0);
+}
+.contenedorder .cumple{
+    cursor: pointer;
+    margin-top: 4%;
+    padding: 3% 3% 3% 3% ;
+    width: 100%; 
+    height:10% ;
+    background: white;
+    border-radius: 10px;
+    border: 0.7px solid rgba(221, 221, 221, 0.514);
+    box-shadow: 0px 0px 1px 1px rgba(214, 214, 215, 0.0);
+}
+.contenedorder .idioma{
+    margin-top: 4%;
+    background: white;
+    width: 100%; 
+    height: 15%;
+    padding: 3% 0.2% 2% 0.2% ;
+    border-radius: 10px;
+    border: 0.7px solid rgba(221, 221, 221, 0.514);
+    box-shadow: 0px 0px 1px 1px rgba(214, 214, 215, 0.0);
+}
+.contenedorder .pie{
+    margin-top: 4%;
+    width: 100%; 
+    height: 30%;
+}
+.contenedorder .historias .titulo{
+    padding: 1% 7% 1% 3%;
+    display: flex;
+    width: 100%; 
+    height: 11%;
+}
+.contenedorder .historias .cuerpo{  
+    width: 100%; 
+    height: 90%;
+}
+.contenedorder .historias .his{
+    height: 25%;
+    width:100%;
+    display:flex;
+    padding: 0% 0% 0% 3%;
+}
+.contenedorder .historias .his .pic{
+    height:100%;
+    width:20% ;
+    flex:20;
+}
+.contenedorder .historias .his .descrip{
+    height:100%;
+    width:80% ;
+    flex:80;
+    padding: 2% 0% 1% 0%;
+}
+.contenedorder .historias .his .descrip .nombre{
+    font-size: 85%;
+    color:#3B5CA0;
+    margin-left: 4%;
+    margin-top: 2%;
+    font-weight: bold;
+   
+}
+.contenedorder .historias .his .descrip .nombre:hover{
+    TEXT-DECORATION:underline;
+    cursor: pointer;
+}
+.contenedorder .historias .his .descrip .hora{
+    font-size: 85%;
+    color:rgb(160, 160, 160);
+    margin-left: 4%;
+    margin-bottom: 5%;
+}
+.contenedorder .cumple .cont{
+    margin-left: 5%;
+    width:90%; 
+    height:90%;
+    display: flex;
+}
+.contenedorder .cumple .cont:hover{
+    background:#EBEDF0;
+}
+.contenedorder .idioma .cont{
+    margin-left: 5%;
+    width:90%; 
+    height:90%;
+    display: flex;
+}
+.contenedorder .idioma .idiom{
+ height: 100%;
+ display: inline;
+ flex: 65%;
+}
+.contenedorder .idioma .icon{
+height: 100%;
+flex: 35%;
+}
+.contenedorder .idioma .idiom .idio1{
+    color: rgb(160, 160, 160);
+    font-size:80%;
+}
+.contenedorder .idioma .idiom .idio2,
+.contenedorder .idioma .idiom .idio3,
+.contenedorder .idioma .idiom .idio4,
+.contenedorder .idioma .idiom .idio5{
+    font-size:80%;
+    color:#3B5CA0;
+}
+.contenedorder .idioma .idiom .idio2:hover,
+.contenedorder .idioma .idiom .idio3:hover,
+.contenedorder .idioma .idiom .idio4:hover,
+.contenedorder .idioma .idiom .idio5:hover{
+    TEXT-DECORATION:underline;
+    cursor: pointer;
+}
+.contenedorder .idioma .icon .mas{
+    height: 40%;
+    width: 40%;
+    background: #F5F6F7;
+    margin-left: 50%;
+    margin-top: 12%;
+    border-radius: 6px;
+    padding: 2% 4% 5% 14%;
+}
+.contenedorder .idioma .icon .mas:hover{
+    background: #EBEDF0;
+}
+.contenedorder .pie .creditos{
+    font-size: 90%;
+    width: 80%;    
+    height: 100%;
+    display: inline-block;
+}
+.contenedorder .pie .creditos .s{
+    color: darkgray;
+}
+.publicacion{
+    width: 100%;
+    height: 558px;
+    background: yellow;
+    margin-top: 2%;
+}
